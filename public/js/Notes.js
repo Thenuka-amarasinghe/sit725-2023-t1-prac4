@@ -1,3 +1,4 @@
+/* This adds html eliments and dispalying the exsting notes with given variables */
 const addCards = (items) => {
     items.forEach(item => {
         let itemToAppend = 
@@ -12,6 +13,7 @@ const addCards = (items) => {
     });
 }
 
+/* Submitting form with data */
 const formSubmitted = () => {
     let formData = {};
     formData.title = $('#title').val();
@@ -20,6 +22,7 @@ const formSubmitted = () => {
     postNotes(formData);
 }
 
+/* Posting notes to the MongoDB */
 function postNotes(Notes){
     $.ajax({
         url:'/api/Notes',
@@ -33,6 +36,7 @@ function postNotes(Notes){
     });
 }
 
+/* Getting all notes from the DB */
 function getAllNotes(){
     $.get('/api/Notes', (response)=>{
         if (response.statusCode === 200) {
@@ -41,6 +45,7 @@ function getAllNotes(){
     });
 }
 
+/* Defining commands to run*/
 $(document).ready(function(){
     $('.materialboxed').materialbox();
     $('#formSubmit').click(()=>{
