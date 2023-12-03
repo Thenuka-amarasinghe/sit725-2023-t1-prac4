@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>Notes</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<nav class="blue">
+			<div class="nav-wrapper navbar">
+				<a href="#" class="brand-logo"><img class="logo">Notes</a>
+			</div>
+		  </nav>
+		<main class="main-body">
+			<div class="container">	
+				<div class="row">
+					<div class="col s12 center-align">
+						<h1 id="heading">Welcome to Notes</h1>
+						<p class="flow-text">This is a demo application created for Week 4 assignment where we have to create a website using MongoDB.
+							In this website u can add notes which stores in mongodb://localhost:27017</p>
+					</div>
+					<div class="col s12 center-align">
+						<a class="btn-floating btn-large waves-effect waves-light blue click-me-button modal-trigger" id="clickMeButton" data-target="newNote"><i class="material-icons">add</i></a>
+					</div>
+			</div>
+			<div id="newNote" class="modal modal-fixed-footer">
+				<div class="row modal-content">
+					<form class="col s12">
+						<div class="row">
+							<div class="input-field col s6">
+								<input id="title" type="text" class="validate">
+								<label for="title">Title</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<textarea id="description" type="text"  class="materialize-textarea validate"></textarea>
+								<label for="description">Description</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12 center-align">
+								<a class="blue waves-effect waves-light btn" id="formSubmit">Add Note</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			</div>
+			<div center-align>
+				<h4 class="header center-align">Your Notes</h4>
+			</div>
+			<div class="row" id="card-section">
+			</div>
+		</main>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="js/Notes.js"></script>
+	</body>
+</html>
